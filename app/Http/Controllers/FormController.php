@@ -9,7 +9,7 @@ class FormController extends Controller
     //
     public function showForm()
     {
-        return view('form');
+        return view('formUploadFile');
     }
 
     public function submitForm(Request $request)

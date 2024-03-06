@@ -14,8 +14,10 @@ use App\Http\Controllers\FormController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/post',[FormController::class, 'index']);
+Route::post('/post',[FormController::class, 'post']);
+
+Route::get('/',function (){
+    return view('formUploadFile');
 });
-Route::get('/form', [FormController::class, 'showForm']);
-Route::post('/form-submit', [FormController::class, 'submitForm']);
+Route::post('/',[FormController::class,'getForm'])->name('form');
